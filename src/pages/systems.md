@@ -91,7 +91,7 @@ These systems create consistency and make classes flow smoothly even during busy
 
 ---
 
-## 🔧 Why These Systems Matter (For Recruiters)
+## 🔧 Why These Systems Matter
 
 Creating these tools has strengthened professional skills such as:
 
