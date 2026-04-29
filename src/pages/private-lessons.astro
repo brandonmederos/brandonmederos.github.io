@@ -12,8 +12,8 @@ const email = "brandonm@gbbegroup.com";
     </p>
   </section>
 
-  <section class="grid">
-    <div class="card">
+  <section class="content-layout">
+    <div class="card what-card">
       <h2>What You Get</h2>
       <ul>
         <li>Personalized 1-on-1 training</li>
@@ -24,83 +24,123 @@ const email = "brandonm@gbbegroup.com";
       </ul>
     </div>
 
-    <div class="card accent">
+    <div class="card commitment-card">
       <h2>No Long-Term Commitment</h2>
       <p>Train at your pace.</p>
       <p>Save when you book 4 sessions.</p>
     </div>
-  </section>
 
-  <section class="card pricing">
-    <h2>Pricing</h2>
+    <section class="card pricing">
+      <h2>Pricing</h2>
 
-    <h3>Single Sessions</h3>
-    <p>
-      <strong>At Local Park:</strong> 30 min - $85 | 45 min - $110 | 60 min - $135
-    </p>
-    <p><strong>At Home:</strong> 45 min - $125 | 60 min - $165</p>
+      <div class="pricing-grid">
+        <div class="pricing-column">
+          <h3>Single Sessions</h3>
 
-    <h3>4-Session Packages</h3>
-    <p>
-      <strong>At Local Park:</strong> 4 x 30 min - $300 | 4 x 45 min - $395 | 4 x
-      60 min - $445
-    </p>
-    <p><strong>At Home:</strong> 4 x 45 min - $445 | 4 x 60 min - $535</p>
-  </section>
+          <p class="sub">At Local Park</p>
+          <p>30 min - $85</p>
+          <p>45 min - $110</p>
+          <p>60 min - $135</p>
 
-  <section class="cta">
-    <h2>Book Your First Session Today</h2>
-    <a href="tel:17865317439">{phone}</a>
-    <a href="mailto:{email}">{email}</a>
+          <p class="sub">At Home</p>
+          <p>45 min - $125</p>
+          <p>60 min - $165</p>
+        </div>
+
+        <div class="pricing-column center">
+          <div class="mobile-divider"></div>
+          <h3>Average Pricing</h3>
+          <p class="price-highlight">$85-$165</p>
+          <p class="muted">Flexible session options available</p>
+          <p class="muted">Save with packages</p>
+        </div>
+
+        <div class="mobile-divider"></div>
+        <div class="pricing-column">
+          <h3>4-Session Packages</h3>
+
+          <p class="sub">At Local Park</p>
+          <p>4 x 30 min - $300</p>
+          <p>4 x 45 min - $395</p>
+          <p>4 x 60 min - $445</p>
+
+          <p class="sub">At Home</p>
+          <p>4 x 45 min - $445</p>
+          <p>4 x 60 min - $535</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Book Your First Session Today</h2>
+      <a href="tel:17865317439">{phone}</a>
+      <a href={`mailto:${email}`}>{email}</a>
+    </section>
   </section>
 </main>
 
-<style>
+<!-- <style>
+  :global(html, body) {
+    margin: 0;
+    padding: 0;
+    background: #0000000000000;
+  }
+
   .page {
-    min-height: 100vh;
-    padding: 4rem 1.25rem;
-    color: white;
-    background: linear-gradient(180deg, #151515 0%, #000 100%);
+    min-height: 100svh;
+    padding: 2rem 1rem;
+    color: #ffffff;
+    background: linear-gradient(180deg, #151515 0%, #000000 100%);
     font-family: system-ui, sans-serif;
   }
 
+  .page * {
+    box-sizing: border-box;
+  }
+
   .hero {
-    max-width: 900px;
-    margin: 0 auto 3rem;
+    width: min(100%, 62rem);
+    margin-inline: auto;
     text-align: center;
+    margin-bottom: 2rem;
   }
 
   .eyebrow {
-    color: #ccc;
+    color: #cccccc;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    font-weight: 700;
+    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
   }
 
   h1 {
-    font-size: clamp(2.5rem, 7vw, 5rem);
-    line-height: 0.95;
-    margin: 0.5rem 0;
+    font-size: clamp(2.25rem, 9vw, 5rem);
+    line-height: 0.92;
+    margin: 0.25rem 0 0.75rem;
     text-transform: uppercase;
+    color: #ffffff;
   }
 
   .subtitle {
-    color: #ccc;
-    font-size: 1.15rem;
+    color: #d0d0d0;
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    max-width: 40rem;
+    margin-inline: auto;
   }
 
-  .grid {
-    max-width: 1000px;
-    margin: 0 auto 2rem;
+  .content-layout {
+    width: min(100%, 62rem);
+    margin-inline: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .card {
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 24px;
-    padding: 1.5rem;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.25rem;
+    padding: 1.25rem;
     background: rgba(255, 255, 255, 0.03);
   }
 
@@ -108,62 +148,497 @@ const email = "brandonm@gbbegroup.com";
   .pricing h2 {
     color: #ff3333;
     text-transform: uppercase;
-    margin-top: 0;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    margin: 0 0 0.75rem;
+  }
+
+  .card p,
+  .card li,
+  .pricing p {
+    color: #dddddd;
+    font-size: clamp(0.95rem, 2.5vw, 1rem);
+    line-height: 1.5;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+    margin: 0;
   }
 
   li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
   }
 
-  .pricing {
-    max-width: 1000px;
-    margin: 0 auto 2rem;
+  .pricing h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
 
-  .pricing h3 {
-    margin-top: 1.5rem;
-    color: white;
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr 1fr;
+    gap: 1rem;
+    align-items: stretch;
   }
 
-  .pricing p {
-    color: #ddd;
+  .pricing-column {
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .pricing-column h3 {
+    color: #ffffff;
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    margin: 0 0 0.5rem;
+  }
+
+  .pricing-column p {
+    margin: 0.25rem 0;
+  }
+
+  .sub {
+    display: block;
+    font-weight: 800;
+    margin-top: 0.75rem;
+    color: #ffffff !important;
+  }
+
+  .center {
+    border-left: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    border-right: 0.0625rem solid rgba(255, 255, 255, 0.15);
+  }
+
+  .price-highlight {
+    font-size: clamp(2rem, 7vw, 2.75rem) !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
+    color: #ff3333 !important;
+    margin: 0.25rem 0 0.5rem !important;
+  }
+
+  .muted {
+    color: #aaaaaa !important;
+    font-size: clamp(0.85rem, 2.5vw, 1rem) !important;
   }
 
   .cta {
-    max-width: 700px;
-    margin: 3rem auto 0;
-    padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 32px;
+    max-width: 40rem;
+    margin: 2rem auto 0;
+    padding: 1.5rem;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.35);
+    border-radius: 1.5rem;
     text-align: center;
   }
 
   .cta h2 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    margin: 0 0 0.75rem;
+    color: #ffffff;
     text-transform: uppercase;
-    margin-top: 0;
   }
 
   .cta a {
     display: block;
     color: #ff3333;
-    font-size: 1.4rem;
-    font-weight: 800;
-    margin: 0.75rem 0;
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+    font-weight: 900;
+    margin: 0.5rem 0;
     text-decoration: none;
+    word-break: break-word;
   }
 
-  @media (max-width: 768px) {
-    .grid {
+  .content-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "what commitment"
+      "pricing pricing"
+      "cta cta";
+    gap: 1rem;
+  }
+
+  .what-card {
+    grid-area: what;
+  }
+
+  .commitment-card {
+    grid-area: commitment;
+  }
+
+  .pricing {
+    grid-area: pricing;
+  }
+
+  .cta {
+    grid-area: cta;
+  }
+
+  .mobile-divider {
+    display: none;
+  }
+
+  .card h2,
+  .pricing h2 {
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+
+  .pricing-column h3 {
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .card p,
+  .card li,
+  .pricing p {
+    font-size: clamp(1rem, 2.6vw, 1.05rem);
+    line-height: 1.75;
+    color: #cfcfcf;
+  }
+
+  .pricing-column {
+    padding: 1rem 0;
+  }
+
+  .center {
+    padding: 1.5rem 0;
+  }
+
+  .price-highlight {
+    margin: 0.5rem 0 0.75rem !important;
+  }
+
+  .card {
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+
+  @media (max-width: 64em) {
+    .content-layout {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "what"
+        "pricing"
+        "commitment"
+        "cta";
+    }
+
+    .pricing-grid {
       grid-template-columns: 1fr;
     }
 
-    .page {
-      padding: 2.5rem 1rem;
+    .center {
+      border-left: none;
+      border-right: none;
+      padding: 1rem 0;
+      margin: 0.75rem 0;
     }
 
-    .card,
+    .mobile-divider {
+      display: block;
+      width: 100%;
+      min-height: 0.225rem;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.45),
+        transparent
+      );
+      margin: 1rem 0;
+    }
+
+    .what-card,
+    .commitment-card {
+      text-align: center;
+    }
+
+    .what-card h2,
+    .commitment-card h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .what-card ul {
+      display: inline-block;
+      text-align: left;
+      padding-left: 1.1rem;
+      margin-inline: auto;
+    }
+
+    .commitment-card p {
+      text-align: center;
+    }
+  }
+</style> -->
+
+<style>
+  :global(html),
+  :global(body) {
+    margin: 0;
+    padding: 0;
+    background: #000;
+  }
+
+  .page {
+    min-height: 100svh;
+    padding: 2rem 1rem;
+    color: #fff;
+    background: linear-gradient(180deg, #151515 0%, #000 100%);
+    font-family:
+      "Aptos", "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .page * {
+    box-sizing: border-box;
+  }
+
+  .hero,
+  .content-layout {
+    width: min(100%, 62rem);
+    margin-inline: auto;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .eyebrow,
+  h1,
+  .card h2,
+  .pricing h2,
+  .pricing-column h3,
+  .cta h2 {
+    font-family:
+      "Arial Narrow", "Aptos Display", "Segoe UI Condensed", "Helvetica Neue",
+      Arial, sans-serif;
+    text-transform: uppercase;
+  }
+
+  .eyebrow {
+    color: #ccc;
+    letter-spacing: 0.08em;
+    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 9vw, 5rem);
+    line-height: 0.92;
+    margin: 0.25rem 0 0.75rem;
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+  }
+
+  .subtitle {
+    color: #d0d0d0;
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    max-width: 40rem;
+    margin-inline: auto;
+  }
+
+  .content-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "what commitment"
+      "pricing pricing"
+      "cta cta";
+    gap: 1rem;
+  }
+
+  .what-card {
+    grid-area: what;
+  }
+
+  .commitment-card {
+    grid-area: commitment;
+  }
+
+  .pricing {
+    grid-area: pricing;
+  }
+
+  .cta {
+    grid-area: cta;
+  }
+
+  .card,
+  .cta {
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .card h2,
+  .pricing h2 {
+    color: #ff3333;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.9rem;
+  }
+
+  .card p,
+  .card li,
+  .pricing p {
+    color: #cfcfcf;
+    font-size: clamp(1rem, 2.6vw, 1.05rem);
+    line-height: 1.75;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin-bottom: 0.35rem;
+  }
+
+  .pricing h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr 1fr;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .pricing-column {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .pricing-column h3 {
+    color: #fff;
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.5rem;
+  }
+
+  .pricing-column p {
+    margin: 0.25rem 0;
+  }
+
+  .sub {
+    display: block;
+    margin-top: 0.75rem;
+    color: #fff;
+    font-weight: 800;
+  }
+
+  .center {
+    padding: 1.5rem 0;
+    border-left: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    border-right: 0.0625rem solid rgba(255, 255, 255, 0.15);
+  }
+
+  .price-highlight {
+    color: #ff3333 !important;
+    font-size: clamp(2rem, 7vw, 2.75rem) !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
+    margin: 0.5rem 0 0.75rem !important;
+  }
+
+  .muted {
+    color: #aaa !important;
+    font-size: clamp(0.85rem, 2.5vw, 1rem) !important;
+  }
+
+  .mobile-divider {
+    display: none;
+  }
+
+  .cta {
+    max-width: 40rem;
+    margin: 2rem auto 0;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .cta h2 {
+    color: #fff;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    font-weight: 900;
+    margin: 0 0 0.75rem;
+  }
+
+  .cta a {
+    display: block;
+    color: #ff3333;
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+    font-weight: 900;
+    margin: 0.5rem 0;
+    text-decoration: none;
+    word-break: break-word;
+  }
+
+  @media (max-width: 64em) {
+    .content-layout {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "what"
+        "pricing"
+        "commitment"
+        "cta";
+    }
+
+    .what-card,
+    .commitment-card {
+      text-align: center;
+    }
+
+    .what-card ul {
+      display: inline-block;
+      text-align: left;
+      margin-inline: auto;
+    }
+
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .center {
+      border-left: none;
+      border-right: none;
+      padding: 1rem 0;
+    }
+
+    .mobile-divider {
+      display: block;
+      width: 100%;
+      min-height: 0.125rem;
+      margin: 1rem 0;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.45),
+        transparent
+      );
+    }
+
+    .card {
+      padding: 1rem;
+    }
+
     .cta {
-      border-radius: 20px;
+      padding: 1.25rem;
+      border-radius: 1.25rem;
     }
   }
 </style>
