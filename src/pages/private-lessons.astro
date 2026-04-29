@@ -1,0 +1,169 @@
+---
+const phone = "(786) 531-7439";
+const email = "brandonm@gbbegroup.com";
+---
+
+<main class="page">
+  <section class="hero">
+    <p class="eyebrow">Karate - Kickboxing - MMA - Ages 3 to Adult</p>
+    <h1>Private Martial Arts Training</h1>
+    <p class="subtitle">
+      Personalized 1-on-1 training with no long-term commitment.
+    </p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>What You Get</h2>
+      <ul>
+        <li>Personalized 1-on-1 training</li>
+        <li>Structured lesson plans</li>
+        <li>Progress tracking after every session</li>
+        <li>Confidence & discipline focused</li>
+        <li>Beginner to advanced training</li>
+      </ul>
+    </div>
+
+    <div class="card accent">
+      <h2>No Long-Term Commitment</h2>
+      <p>Train at your pace.</p>
+      <p>Save when you book 4 sessions.</p>
+    </div>
+  </section>
+
+  <section class="card pricing">
+    <h2>Pricing</h2>
+
+    <h3>Single Sessions</h3>
+    <p>
+      <strong>At Local Park:</strong> 30 min - $85 | 45 min - $110 | 60 min - $135
+    </p>
+    <p><strong>At Home:</strong> 45 min - $125 | 60 min - $165</p>
+
+    <h3>4-Session Packages</h3>
+    <p>
+      <strong>At Local Park:</strong> 4 x 30 min - $300 | 4 x 45 min - $395 | 4 x
+      60 min - $445
+    </p>
+    <p><strong>At Home:</strong> 4 x 45 min - $445 | 4 x 60 min - $535</p>
+  </section>
+
+  <section class="cta">
+    <h2>Book Your First Session Today</h2>
+    <a href="tel:17865317439">{phone}</a>
+    <a href="mailto:{email}">{email}</a>
+  </section>
+</main>
+
+<style>
+  .page {
+    min-height: 100vh;
+    padding: 4rem 1.25rem;
+    color: white;
+    background: linear-gradient(180deg, #151515 0%, #000 100%);
+    font-family: system-ui, sans-serif;
+  }
+
+  .hero {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+
+  .eyebrow {
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 0.95;
+    margin: 0.5rem 0;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    color: #ccc;
+    font-size: 1.15rem;
+  }
+
+  .grid {
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .card {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 24px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .card h2,
+  .pricing h2 {
+    color: #ff3333;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .pricing {
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+  }
+
+  .pricing h3 {
+    margin-top: 1.5rem;
+    color: white;
+  }
+
+  .pricing p {
+    color: #ddd;
+  }
+
+  .cta {
+    max-width: 700px;
+    margin: 3rem auto 0;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 32px;
+    text-align: center;
+  }
+
+  .cta h2 {
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+
+  .cta a {
+    display: block;
+    color: #ff3333;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0.75rem 0;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    .page {
+      padding: 2.5rem 1rem;
+    }
+
+    .card,
+    .cta {
+      border-radius: 20px;
+    }
+  }
+</style>
