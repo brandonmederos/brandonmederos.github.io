@@ -26,8 +26,10 @@ const email = "brandonm@gbbegroup.com";
 
     <div class="card commitment-card">
       <h2>No Long-Term Commitment</h2>
-      <p>Train at your pace.</p>
-      <p>Save when you book 4 sessions.</p>
+      <ul>
+        <li>Train at your pace.</li>
+        <li>Save when you book 4 sessions.</li>
+      </ul>
     </div>
 
     <section class="card pricing">
@@ -35,14 +37,14 @@ const email = "brandonm@gbbegroup.com";
 
       <div class="pricing-grid">
         <div class="pricing-column">
-          <h3>Single Sessions</h3>
+          <h3>&#129355 Single Sessions &#129355</h3>
 
-          <p class="sub">At Local Park</p>
+          <p class="sub">&#127794 At Local Park &#127794</p>
           <p>30 min - $85</p>
           <p>45 min - $110</p>
           <p>60 min - $135</p>
 
-          <p class="sub">At Home</p>
+          <p class="sub">&#127968 At Home &#127968</p>
           <p>45 min - $125</p>
           <p>60 min - $165</p>
         </div>
@@ -57,14 +59,14 @@ const email = "brandonm@gbbegroup.com";
 
         <div class="mobile-divider"></div>
         <div class="pricing-column">
-          <h3>4-Session Packages</h3>
+          <h3>&#128230 4-Session Packages &#128230</h3>
 
-          <p class="sub">At Local Park</p>
+          <p class="sub">&#127794At Local Park &#127794</p>
           <p>4 x 30 min - $300</p>
           <p>4 x 45 min - $395</p>
           <p>4 x 60 min - $445</p>
 
-          <p class="sub">At Home</p>
+          <p class="sub">&#127968 At Home &#127968</p>
           <p>4 x 45 min - $445</p>
           <p>4 x 60 min - $535</p>
         </div>
@@ -78,300 +80,6 @@ const email = "brandonm@gbbegroup.com";
     </section>
   </section>
 </main>
-
-<!-- <style>
-  :global(html, body) {
-    margin: 0;
-    padding: 0;
-    background: #0000000000000;
-  }
-
-  .page {
-    min-height: 100svh;
-    padding: 2rem 1rem;
-    color: #ffffff;
-    background: linear-gradient(180deg, #151515 0%, #000000 100%);
-    font-family: system-ui, sans-serif;
-  }
-
-  .page * {
-    box-sizing: border-box;
-  }
-
-  .hero {
-    width: min(100%, 62rem);
-    margin-inline: auto;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .eyebrow {
-    color: #cccccc;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
-    font-weight: 800;
-    margin-bottom: 0.5rem;
-  }
-
-  h1 {
-    font-size: clamp(2.25rem, 9vw, 5rem);
-    line-height: 0.92;
-    margin: 0.25rem 0 0.75rem;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-
-  .subtitle {
-    color: #d0d0d0;
-    font-size: clamp(1rem, 3vw, 1.15rem);
-    max-width: 40rem;
-    margin-inline: auto;
-  }
-
-  .content-layout {
-    width: min(100%, 62rem);
-    margin-inline: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .card {
-    border: 0.0625rem solid rgba(255, 255, 255, 0.2);
-    border-radius: 1.25rem;
-    padding: 1.25rem;
-    background: rgba(255, 255, 255, 0.03);
-  }
-
-  .card h2,
-  .pricing h2 {
-    color: #ff3333;
-    text-transform: uppercase;
-    font-size: clamp(1.1rem, 3vw, 1.3rem);
-    margin: 0 0 0.75rem;
-  }
-
-  .card p,
-  .card li,
-  .pricing p {
-    color: #dddddd;
-    font-size: clamp(0.95rem, 2.5vw, 1rem);
-    line-height: 1.5;
-  }
-
-  ul {
-    padding-left: 1.2rem;
-    margin: 0;
-  }
-
-  li {
-    margin-bottom: 0.35rem;
-  }
-
-  .pricing h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: 1fr 0.85fr 1fr;
-    gap: 1rem;
-    align-items: stretch;
-  }
-
-  .pricing-column {
-    text-align: center;
-    padding: 0.5rem;
-  }
-
-  .pricing-column h3 {
-    color: #ffffff;
-    font-size: clamp(1rem, 2.5vw, 1.15rem);
-    margin: 0 0 0.5rem;
-  }
-
-  .pricing-column p {
-    margin: 0.25rem 0;
-  }
-
-  .sub {
-    display: block;
-    font-weight: 800;
-    margin-top: 0.75rem;
-    color: #ffffff !important;
-  }
-
-  .center {
-    border-left: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    border-right: 0.0625rem solid rgba(255, 255, 255, 0.15);
-  }
-
-  .price-highlight {
-    font-size: clamp(2rem, 7vw, 2.75rem) !important;
-    line-height: 1 !important;
-    font-weight: 900 !important;
-    color: #ff3333 !important;
-    margin: 0.25rem 0 0.5rem !important;
-  }
-
-  .muted {
-    color: #aaaaaa !important;
-    font-size: clamp(0.85rem, 2.5vw, 1rem) !important;
-  }
-
-  .cta {
-    max-width: 40rem;
-    margin: 2rem auto 0;
-    padding: 1.5rem;
-    border: 0.0625rem solid rgba(255, 255, 255, 0.35);
-    border-radius: 1.5rem;
-    text-align: center;
-  }
-
-  .cta h2 {
-    font-size: clamp(1.2rem, 4vw, 1.5rem);
-    margin: 0 0 0.75rem;
-    color: #ffffff;
-    text-transform: uppercase;
-  }
-
-  .cta a {
-    display: block;
-    color: #ff3333;
-    font-size: clamp(1.1rem, 4vw, 1.5rem);
-    font-weight: 900;
-    margin: 0.5rem 0;
-    text-decoration: none;
-    word-break: break-word;
-  }
-
-  .content-layout {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "what commitment"
-      "pricing pricing"
-      "cta cta";
-    gap: 1rem;
-  }
-
-  .what-card {
-    grid-area: what;
-  }
-
-  .commitment-card {
-    grid-area: commitment;
-  }
-
-  .pricing {
-    grid-area: pricing;
-  }
-
-  .cta {
-    grid-area: cta;
-  }
-
-  .mobile-divider {
-    display: none;
-  }
-
-  .card h2,
-  .pricing h2 {
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
-  }
-
-  .pricing-column h3 {
-    font-weight: 800;
-    letter-spacing: 0.04em;
-  }
-
-  .card p,
-  .card li,
-  .pricing p {
-    font-size: clamp(1rem, 2.6vw, 1.05rem);
-    line-height: 1.75;
-    color: #cfcfcf;
-  }
-
-  .pricing-column {
-    padding: 1rem 0;
-  }
-
-  .center {
-    padding: 1.5rem 0;
-  }
-
-  .price-highlight {
-    margin: 0.5rem 0 0.75rem !important;
-  }
-
-  .card {
-    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.02);
-  }
-
-
-  @media (max-width: 64em) {
-    .content-layout {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "what"
-        "pricing"
-        "commitment"
-        "cta";
-    }
-
-    .pricing-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .center {
-      border-left: none;
-      border-right: none;
-      padding: 1rem 0;
-      margin: 0.75rem 0;
-    }
-
-    .mobile-divider {
-      display: block;
-      width: 100%;
-      min-height: 0.225rem;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.45),
-        transparent
-      );
-      margin: 1rem 0;
-    }
-
-    .what-card,
-    .commitment-card {
-      text-align: center;
-    }
-
-    .what-card h2,
-    .commitment-card h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .what-card ul {
-      display: inline-block;
-      text-align: left;
-      padding-left: 1.1rem;
-      margin-inline: auto;
-    }
-
-    .commitment-card p {
-      text-align: center;
-    }
-  }
-</style> -->
 
 <style>
   :global(html),
