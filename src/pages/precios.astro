@@ -1,0 +1,557 @@
+---
+const phone = "(786) 531-7439";
+const email = "brandonm@gbbegroup.com";
+---
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<div class="page">
+  <main class="flyer">
+    <section class="hero">
+      <a class="lang-btn" href="/pricing"> See in English </a>
+
+      <p class="eyebrow">Karate - Kickboxing - MMA - Edades 3 a Adulto</p>
+
+      <h1>
+        ENTRENAMIENTO<br />
+        PRIVADO DE<br />
+        <span class="red">ARTES MARCIALES</span>
+      </h1>
+
+      <p class="description">
+        Entrenamiento personalizado 1-a-1 sin compromiso a largo plazo. Las
+        sesiones privadas est&aacute;n disponibles en un parque local o
+        directamente en su hogar.
+      </p>
+
+      <div class="highlight">
+        <div class="highlight-price">$85-$165</div>
+
+        <div>
+          <div class="highlight-title">Opciones Flexibles de Sesiones</div>
+
+          <div class="highlight-small">Ahorre cuando reserve 4 sesiones</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <h2>Lo Que Recibe</h2>
+
+        <div class="benefit">
+          <span class="dot"></span>
+          <span>Entrenamiento personalizado 1-a-1</span>
+        </div>
+
+        <div class="benefit">
+          <span class="dot"></span>
+          <span>Planes de lecciones estructurados</span>
+        </div>
+
+        <div class="benefit">
+          <span class="dot"></span>
+          <span
+            >Seguimiento de progreso despu&eacute;s de cada sesi&oacute;n</span
+          >
+        </div>
+
+        <div class="benefit">
+          <span class="dot"></span>
+          <span>Enfoque en confianza y disciplina</span>
+        </div>
+
+        <div class="benefit">
+          <span class="dot"></span>
+          <span>Entrenamiento para principiantes y avanzados</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Sin Compromiso a Largo Plazo</h2>
+
+        <div class="benefit">
+          <span class="dot"></span>
+          <span>Entrene a su propio ritmo</span>
+        </div>
+
+        <div class="benefit">
+          <span class="dot"></span>
+          <span>Reserve sesiones individuales</span>
+        </div>
+
+        <div class="benefit">
+          <span class="dot"></span>
+          <span>Ahorre con paquetes de 4 sesiones</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <h2>Precios</h2>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Sesiones Individuales</h3>
+
+          <p class="sub">En Parque Local</p>
+          <p>30 min - $85</p>
+          <p>45 min - $110</p>
+          <p>60 min - $135</p>
+
+          <p class="sub">En Casa</p>
+          <p>45 min - $125</p>
+          <p>60 min - $165</p>
+        </div>
+
+        <div class="price-card featured">
+          <h3>Precios Promedio</h3>
+
+          <p class="big-price">$85-$165</p>
+
+          <p class="muted">Opciones flexibles de sesiones disponibles</p>
+
+          <p class="muted">Ahorre con paquetes</p>
+        </div>
+
+        <div class="price-card">
+          <h3>Paquetes de 4 Sesiones</h3>
+
+          <p class="sub">En Parque Local</p>
+          <p>4 x 30 min - $300</p>
+          <p>4 x 45 min - $395</p>
+          <p>4 x 60 min - $445</p>
+
+          <p class="sub">En Casa</p>
+          <p>4 x 45 min - $445</p>
+          <p>4 x 60 min - $535</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div>
+        <h3>RESERVE SU PRIMERA SESI&Oacute;N HOY</h3>
+
+        <p>
+          Comience con una sesi&oacute;n privada y elija la opci&oacute;n que
+          mejor se adapte a su horario, metas y ubicaci&oacute;n.
+        </p>
+      </div>
+
+      <div class="contact">
+        <div class="contact-label">Contacto</div>
+
+        <div class="contact-name">Brandon Mederos</div>
+
+        <a href="tel:17865317439">{phone}</a>
+
+        <a href={`mailto:${email}`}>{email}</a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<style>
+  :global(html),
+  :global(body) {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #050505;
+    overflow-x: hidden;
+  }
+
+  :global(body) {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .lang-btn {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 14px;
+
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .lang-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(239, 68, 68, 0.35);
+    color: #ffffff;
+  }
+  .page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #050505;
+  }
+
+  .flyer {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #050505;
+  }
+
+  .hero {
+    padding: 56px;
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(239, 68, 68, 0.28),
+        transparent 35%
+      ),
+      radial-gradient(
+        circle at bottom left,
+        rgba(239, 68, 68, 0.16),
+        transparent 35%
+      );
+  }
+
+  .eyebrow {
+    color: #f87171;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 22px;
+  }
+
+  h1 {
+    font-size: clamp(48px, 8vw, 82px);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    font-weight: 950;
+    margin: 0 0 26px;
+  }
+
+  .red {
+    color: #ef4444;
+  }
+
+  .description {
+    color: #d4d4d8;
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: 30px;
+    max-width: 650px;
+  }
+
+  .highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    background: #dc2626;
+    padding: 18px 24px;
+    border-radius: 22px;
+    box-shadow: 0 18px 40px rgba(220, 38, 38, 0.35);
+  }
+
+  .highlight-price {
+    font-size: 42px;
+    font-weight: 950;
+    line-height: 1;
+  }
+
+  .highlight-title {
+    font-size: 19px;
+    font-weight: 900;
+  }
+
+  .highlight-small {
+    color: #fee2e2;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    padding: 34px 56px;
+  }
+
+  .card,
+  .price-card {
+    background: rgba(24, 24, 27, 0.86);
+    border: 1px solid #3f3f46;
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+  }
+
+  .card h2,
+  .pricing h2,
+  .price-card h3 {
+    margin: 0 0 18px;
+    font-weight: 950;
+    letter-spacing: -0.04em;
+  }
+
+  .card h2 {
+    font-size: 30px;
+  }
+
+  .benefit {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: rgba(39, 39, 42, 0.82);
+    border: 1px solid #3f3f46;
+    padding: 15px;
+    border-radius: 18px;
+    margin-bottom: 12px;
+    color: #e4e4e7;
+    font-size: 17px;
+    line-height: 1.25;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    border-radius: 50%;
+    background: #ef4444;
+    margin-top: 6px;
+  }
+
+  .pricing {
+    padding: 10px 56px 40px;
+  }
+
+  .pricing h2 {
+    color: #ef4444;
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 24px;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr 1fr;
+    gap: 18px;
+  }
+
+  .price-card {
+    text-align: center;
+  }
+
+  .price-card h3 {
+    font-size: 25px;
+    color: #ffffff;
+  }
+
+  .price-card p {
+    color: #d4d4d8;
+    font-size: 17px;
+    line-height: 1.45;
+    margin: 8px 0;
+  }
+
+  .sub {
+    color: #ffffff !important;
+    font-weight: 900;
+    margin-top: 20px !important;
+  }
+
+  .featured {
+    background: #dc2626;
+    border-color: #ef4444;
+  }
+
+  .featured p,
+  .featured h3 {
+    color: #ffffff;
+  }
+
+  .big-price {
+    font-size: 44px !important;
+    font-weight: 950;
+    line-height: 1 !important;
+    margin: 20px 0 !important;
+  }
+
+  .muted {
+    color: #fee2e2 !important;
+    font-size: 15px !important;
+  }
+
+  .cta {
+    background: #dc2626;
+    padding: 34px 56px;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cta h3 {
+    font-size: 31px;
+    font-weight: 950;
+    margin: 0 0 8px;
+    letter-spacing: -0.04em;
+  }
+
+  .cta p {
+    color: #fee2e2;
+    font-size: 17px;
+    line-height: 1.45;
+    max-width: 560px;
+    margin: 0;
+  }
+
+  .contact {
+    background: #ffffff;
+    color: #050505;
+    border-radius: 22px;
+    padding: 24px 28px;
+    min-width: 330px;
+    max-width: 360px;
+    text-align: center;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+  }
+
+  .contact-label {
+    color: #71717a;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .contact-name {
+    font-size: 25px;
+    font-weight: 950;
+    margin-bottom: 10px;
+  }
+
+  .contact a {
+    display: block;
+    color: #dc2626;
+    font-weight: 900;
+    text-decoration: none;
+    margin-top: 6px;
+    word-break: break-word;
+  }
+
+  @media (max-width: 950px) {
+    .flyer {
+      max-width: none;
+      margin: 0;
+    }
+
+    .hero {
+      padding: 32px 22px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+    }
+
+    h1 {
+      font-size: clamp(52px, 15vw, 76px);
+      line-height: 0.87;
+    }
+
+    .description {
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .highlight {
+      width: 100%;
+      align-items: center;
+    }
+
+    .highlight-price {
+      font-size: 34px;
+    }
+
+    .cards,
+    .pricing {
+      padding: 24px 22px;
+    }
+
+    .cards,
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .card,
+    .price-card {
+      padding: 24px;
+      border-radius: 26px;
+    }
+
+    .card h2 {
+      font-size: 31px;
+    }
+
+    .benefit {
+      font-size: 18px;
+    }
+
+    .pricing h2 {
+      font-size: 38px;
+    }
+
+    .price-card h3 {
+      font-size: 28px;
+    }
+
+    .price-card p {
+      font-size: 18px;
+    }
+
+    .featured {
+      order: -1;
+    }
+
+    .big-price {
+      font-size: 48px !important;
+    }
+
+    .cta {
+      padding: 32px 22px;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .contact {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+</style>

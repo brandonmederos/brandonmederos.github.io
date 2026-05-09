@@ -16,7 +16,41 @@
   * {
     box-sizing: border-box;
   }
+  .lang-btn {
+    position: absolute;
+    top: 22px;
+    right: 22px;
 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 14px;
+
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .lang-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(239, 68, 68, 0.35);
+    color: #ffffff;
+  }
   .page {
     width: 100%;
     margin: 0;
@@ -260,62 +294,66 @@
     <section class="hero">
       <div class="grid">
         <div>
-          <p class="eyebrow">Mobile Martial Arts Coaching</p>
+          <a class="lang-btn" href="/limited-offer"> See in English </a>
+
+          <p class="eyebrow">Entrenamiento M&oacute;vil de Artes Marciales</p>
 
           <h1>
-            REFER A<br />
-            FRIEND.<br />
-            EARN <span class="red">FREE<br />CLASSES.</span>
+            REFIERA A<br />
+            UN AMIGO.<br />
+            GANE <span class="red">CLASES<br />GRATIS.</span>
           </h1>
 
           <p class="description">
-            We bring martial arts directly to your home with private,
-            personalized instruction focused on confidence, discipline, fitness,
-            and real self-defense.
+            Llevamos las artes marciales directamente a su hogar con
+            instrucci&oacute;n privada y personalizada enfocada en confianza,
+            disciplina, condici&oacute;n f&iacute;sica y defensa personal real.
           </p>
 
           <div class="reward">
             <div class="reward-number">2</div>
+
             <div>
-              <div class="reward-title">FREE PRIVATE CLASSES</div>
+              <div class="reward-title">CLASES PRIVADAS GRATIS</div>
+
               <div class="reward-small">
-                when your referral joins a 4-class package
+                cuando su referido se inscribe en un paquete de 4 clases
               </div>
             </div>
           </div>
         </div>
 
         <div class="card">
-          <h2>Why Families Love It</h2>
+          <h2>Por Qu&eacute; Las Familias Lo Aman</h2>
 
           <div class="benefit">
             <span class="dot"></span>
-            <span>Private in-home lessons</span>
+            <span>Clases privadas en casa</span>
           </div>
 
           <div class="benefit">
             <span class="dot"></span>
-            <span>Flexible scheduling</span>
+            <span>Horarios flexibles</span>
           </div>
 
           <div class="benefit">
             <span class="dot"></span>
-            <span>Kids & adults welcome</span>
+            <span>Ni&ntilde;os y adultos bienvenidos</span>
           </div>
 
           <div class="benefit">
             <span class="dot"></span>
-            <span>Karate - Kickboxing - MMA fundamentals</span>
+            <span> Fundamentos de Karate - Kickboxing - MMA </span>
           </div>
 
           <div class="benefit">
             <span class="dot"></span>
-            <span>Confidence & discipline building</span>
+            <span>Desarrollo de confianza y disciplina</span>
           </div>
 
           <div class="benefit">
             <span class="dot"></span>
-            <span>15+ years martial arts experience</span>
+            <span>15+ a&ntilde;os de experiencia en artes marciales</span>
           </div>
         </div>
       </div>
@@ -323,20 +361,21 @@
 
     <section class="cta">
       <div>
-        <h3>WE GROW THROUGH REFERRALS</h3>
+        <h3>CRECEMOS A TRAV&Eacute;S DE REFERIDOS</h3>
 
         <p>
-          If you know someone interested in martial arts training, fitness,
-          confidence, or self-defense - send them my way.
+          Si conoce a alguien interesado en entrenamiento de artes marciales,
+          condici&oacute;n f&iacute;sica, confianza o defensa personal -
+          env&iacute;elos conmigo.
         </p>
       </div>
 
       <div class="contact">
-        <div class="contact-label">Contact</div>
+        <div class="contact-label">Contacto</div>
 
         <div class="contact-name">Brandon Mederos</div>
 
-        <div>Mobile Private Lessons</div>
+        <div>Clases Privadas M&oacute;viles</div>
 
         <div class="contact-small">
           (786) 531-7439 <br />
