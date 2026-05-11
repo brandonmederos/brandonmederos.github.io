@@ -1,0 +1,175 @@
+---
+const {
+  title = "Private Martial Arts Training",
+  description = "Private martial arts coaching for kids, teens, and adults.",
+  lang = "en",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <header class="teach-header">
+      <a class="brand" href="/teach/" aria-label="Martial Arts Home">
+        <span class="brand-mark">BGM</span>
+        <span class="brand-text">
+          <strong>Martial Arts</strong>
+          <small>Private Coaching</small>
+        </span>
+      </a>
+
+      <nav class="teach-nav" aria-label="Martial arts navigation">
+        <a href="/teach/">Home</a>
+        <a href="/teach/pricing/">Pricing</a>
+        <a href="/teach/limited-offer/">Limited Offer</a>
+        <a href="/">Portfolio</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --teach-bg: #050505;
+    --teach-panel: #141416;
+    --teach-panel-soft: #202024;
+    --teach-text: #ffffff;
+    --teach-muted: #cfcfcf;
+    --teach-red: #ef232a;
+    --teach-red-bright: #ff4747;
+    --teach-border: rgba(255, 255, 255, 0.12);
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--teach-bg);
+    color: var(--teach-text);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .teach-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    padding: 1rem clamp(1rem, 4vw, 2rem);
+
+    background: rgba(5, 5, 5, 0.88);
+    border-bottom: 1px solid var(--teach-border);
+    backdrop-filter: blur(12px);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    display: grid;
+    place-items: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border: 2px solid var(--teach-text);
+    border-radius: 999px;
+
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .brand-text strong {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .brand-text small {
+    color: var(--teach-muted);
+    font-size: 0.75rem;
+  }
+
+  .teach-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+  }
+
+  .teach-nav a {
+    color: var(--teach-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .teach-nav a:hover {
+    color: var(--teach-red-bright);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 768px) {
+    .teach-header {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+    }
+
+    .teach-nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .teach-nav a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 3rem;
+
+      border-radius: 999rem;
+
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  }
+</style>

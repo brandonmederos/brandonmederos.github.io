@@ -1,3 +1,108 @@
+---
+import TeachLayout from "../../../layouts/TeachLayout.astro";
+---
+
+<TeachLayout title="Pricing | Private Martial Arts Training">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <div class="page">
+    <main class="flyer">
+      <section class="hero">
+        <a class="lang-btn" href="/teach/limited-offer"> See in English </a>
+        <div class="grid">
+          <div>
+            <p class="eyebrow">Entrenamiento M&oacute;vil de Artes Marciales</p>
+
+            <h1>
+              REFIERA A<br />
+              UN AMIGO.<br />
+              GANE <span class="red">CLASES<br />GRATIS.</span>
+            </h1>
+
+            <p class="description">
+              Llevamos las artes marciales directamente a su hogar con
+              instrucci&oacute;n privada y personalizada enfocada en confianza,
+              disciplina, condici&oacute;n f&iacute;sica y defensa personal
+              real.
+            </p>
+
+            <div class="reward">
+              <div class="reward-number">2</div>
+
+              <div>
+                <div class="reward-title">CLASES PRIVADAS GRATIS</div>
+
+                <div class="reward-small">
+                  cuando su referido se inscribe en un paquete de 4 clases
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Por Qu&eacute; Las Familias Lo Aman</h2>
+
+            <div class="benefit">
+              <span class="dot"></span>
+              <span>Clases privadas en casa</span>
+            </div>
+
+            <div class="benefit">
+              <span class="dot"></span>
+              <span>Horarios flexibles</span>
+            </div>
+
+            <div class="benefit">
+              <span class="dot"></span>
+              <span>Ni&ntilde;os y adultos bienvenidos</span>
+            </div>
+
+            <div class="benefit">
+              <span class="dot"></span>
+              <span> Fundamentos de Karate - Kickboxing - MMA </span>
+            </div>
+
+            <div class="benefit">
+              <span class="dot"></span>
+              <span>Desarrollo de confianza y disciplina</span>
+            </div>
+
+            <div class="benefit">
+              <span class="dot"></span>
+              <span>15+ a&ntilde;os de experiencia en artes marciales</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div>
+          <h3>CRECEMOS A TRAV&Eacute;S DE REFERIDOS</h3>
+
+          <p>
+            Si conoce a alguien interesado en entrenamiento de artes marciales,
+            condici&oacute;n f&iacute;sica, confianza o defensa personal -
+            env&iacute;elos conmigo.
+          </p>
+        </div>
+
+        <div class="contact">
+          <div class="contact-label">Contacto</div>
+
+          <div class="contact-name">Brandon Mederos</div>
+
+          <div>Clases Privadas M&oacute;viles</div>
+
+          <div class="contact-small">
+            (786) 531-7439 <br />
+            IG: @brandongerardomederos
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</TeachLayout>
 <style>
   :global(html),
   :global(body) {
@@ -16,34 +121,47 @@
   * {
     box-sizing: border-box;
   }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 3vw, 1.75rem);
+
+    width: min(100%, 72rem);
+    margin-inline: auto;
+
+    padding: clamp(1.25rem, 4vw, 2rem) clamp(1.25rem, 5vw, 3.5rem)
+      clamp(2.5rem, 7vw, 5rem);
+
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(239, 68, 68, 0.28),
+        transparent 35%
+      ),
+      radial-gradient(
+        circle at bottom left,
+        rgba(239, 68, 68, 0.16),
+        transparent 35%
+      );
+  }
   .lang-btn {
-    position: absolute;
-    top: 22px;
-    right: 22px;
+    align-self: flex-end;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    padding: 10px 14px;
+    padding: 0.65rem 1rem;
+    border-radius: 999rem;
 
-    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.12);
 
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(8px);
-
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.82);
     text-decoration: none;
 
-    font-size: 13px;
+    font-size: clamp(0.7rem, 1.6vw, 0.85rem);
     font-weight: 700;
-    letter-spacing: 0.02em;
-
-    transition:
-      background 0.2s ease,
-      border-color 0.2s ease,
-      color 0.2s ease;
   }
 
   .lang-btn:hover {
@@ -64,22 +182,6 @@
     margin: 0 auto;
     overflow: hidden;
     background: #050505;
-  }
-
-  .hero {
-    position: relative;
-    padding: 56px;
-    background:
-      radial-gradient(
-        circle at top right,
-        rgba(239, 68, 68, 0.28),
-        transparent 35%
-      ),
-      radial-gradient(
-        circle at bottom left,
-        rgba(239, 68, 68, 0.16),
-        transparent 35%
-      );
   }
 
   .grid {
@@ -248,7 +350,8 @@
     }
 
     .hero {
-      padding: 32px 22px;
+      padding: clamp(1.25rem, 5vw, 2rem) clamp(1rem, 5vw, 1.5rem)
+        clamp(2rem, 8vw, 3rem);
     }
 
     .grid {
@@ -285,118 +388,9 @@
       min-width: 0;
     }
     .lang-btn {
-      top: 14px;
-      right: 14px;
-
-      padding: 8px 12px;
-
-      font-size: 11px;
-      letter-spacing: 0.02em;
-
-      border-radius: 999px;
-
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-
-      backdrop-filter: blur(8px);
+      align-self: flex-end;
+      padding: 0.6rem 0.9rem;
+      font-size: clamp(0.7rem, 2.5vw, 0.8rem);
     }
   }
 </style>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<div class="page">
-  <main class="flyer">
-    <section class="hero">
-      <div class="grid">
-        <div>
-          <a class="lang-btn" href="/en-limited-offer"> See in English </a>
-          <p class="eyebrow">Entrenamiento M&oacute;vil de Artes Marciales</p>
-
-          <h1>
-            REFIERA A<br />
-            UN AMIGO.<br />
-            GANE <span class="red">CLASES<br />GRATIS.</span>
-          </h1>
-
-          <p class="description">
-            Llevamos las artes marciales directamente a su hogar con
-            instrucci&oacute;n privada y personalizada enfocada en confianza,
-            disciplina, condici&oacute;n f&iacute;sica y defensa personal real.
-          </p>
-
-          <div class="reward">
-            <div class="reward-number">2</div>
-
-            <div>
-              <div class="reward-title">CLASES PRIVADAS GRATIS</div>
-
-              <div class="reward-small">
-                cuando su referido se inscribe en un paquete de 4 clases
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h2>Por Qu&eacute; Las Familias Lo Aman</h2>
-
-          <div class="benefit">
-            <span class="dot"></span>
-            <span>Clases privadas en casa</span>
-          </div>
-
-          <div class="benefit">
-            <span class="dot"></span>
-            <span>Horarios flexibles</span>
-          </div>
-
-          <div class="benefit">
-            <span class="dot"></span>
-            <span>Ni&ntilde;os y adultos bienvenidos</span>
-          </div>
-
-          <div class="benefit">
-            <span class="dot"></span>
-            <span> Fundamentos de Karate - Kickboxing - MMA </span>
-          </div>
-
-          <div class="benefit">
-            <span class="dot"></span>
-            <span>Desarrollo de confianza y disciplina</span>
-          </div>
-
-          <div class="benefit">
-            <span class="dot"></span>
-            <span>15+ a&ntilde;os de experiencia en artes marciales</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div>
-        <h3>CRECEMOS A TRAV&Eacute;S DE REFERIDOS</h3>
-
-        <p>
-          Si conoce a alguien interesado en entrenamiento de artes marciales,
-          condici&oacute;n f&iacute;sica, confianza o defensa personal -
-          env&iacute;elos conmigo.
-        </p>
-      </div>
-
-      <div class="contact">
-        <div class="contact-label">Contacto</div>
-
-        <div class="contact-name">Brandon Mederos</div>
-
-        <div>Clases Privadas M&oacute;viles</div>
-
-        <div class="contact-small">
-          (786) 531-7439 <br />
-          IG: @brandongerardomederos
-        </div>
-      </div>
-    </section>
-  </main>
-</div>

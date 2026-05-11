@@ -1,134 +1,160 @@
 ---
 const phone = "(786) 531-7439";
 const email = "brandonm@gbbegroup.com";
+import TeachLayout from "../../../layouts/TeachLayout.astro";
 ---
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+<TeachLayout title="Pricing | Private Martial Arts Training">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <div class="page">
+    <main class="flyer">
+      <section class="hero">
+        <a class="lang-btn" href="/teach/pricing"> See in English </a>
 
-<div class="page">
-  <main class="flyer">
-    <section class="hero">
-      <a class="lang-btn" href="/precios"> Ver en Espa&ntilde;ol </a>
-      <p class="eyebrow">Karate - Kickboxing - MMA - Ages 3 to Adult</p>
+        <p class="eyebrow">Karate - Kickboxing - MMA - Edades 3 a Adulto</p>
 
-      <h1>
-        PRIVATE<br />
-        MARTIAL ARTS<br />
-        <span class="red">TRAINING</span>
-      </h1>
+        <h1>
+          ENTRENAMIENTO<br />
+          PRIVADO DE<br />
+          <span class="red">ARTES MARCIALES</span>
+        </h1>
 
-      <p class="description">
-        Personalized 1-on-1 training with no long-term commitment. Private
-        sessions are available at a local park or directly at your home.
-      </p>
-
-      <div class="highlight">
-        <div class="highlight-price">$85-$165</div>
-        <div>
-          <div class="highlight-title">Flexible Session Options</div>
-          <div class="highlight-small">Save when you book 4 sessions</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cards">
-      <div class="card">
-        <h2>What You Get</h2>
-
-        <div class="benefit">
-          <span class="dot"></span><span>Personalized 1-on-1 training</span>
-        </div>
-        <div class="benefit">
-          <span class="dot"></span><span>Structured lesson plans</span>
-        </div>
-        <div class="benefit">
-          <span class="dot"></span><span
-            >Progress tracking after every session</span
-          >
-        </div>
-        <div class="benefit">
-          <span class="dot"></span><span>Confidence & discipline focused</span>
-        </div>
-        <div class="benefit">
-          <span class="dot"></span><span>Beginner to advanced training</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2>No Long-Term Commitment</h2>
-
-        <div class="benefit">
-          <span class="dot"></span><span>Train at your own pace</span>
-        </div>
-        <div class="benefit">
-          <span class="dot"></span><span>Book single sessions</span>
-        </div>
-        <div class="benefit">
-          <span class="dot"></span><span>Save with 4-session packages</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="pricing">
-      <h2>Pricing</h2>
-
-      <div class="pricing-grid">
-        <div class="price-card">
-          <h3>Single Sessions</h3>
-
-          <p class="sub">At Local Park</p>
-          <p>30 min - $85</p>
-          <p>45 min - $110</p>
-          <p>60 min - $135</p>
-
-          <p class="sub">At Home</p>
-          <p>45 min - $125</p>
-          <p>60 min - $165</p>
-        </div>
-
-        <div class="price-card featured">
-          <h3>Average Pricing</h3>
-          <p class="big-price">$85-$165</p>
-          <p class="muted">Flexible session options available</p>
-          <p class="muted">Save with packages</p>
-        </div>
-
-        <div class="price-card">
-          <h3>4-Session Packages</h3>
-
-          <p class="sub">At Local Park</p>
-          <p>4 x 30 min - $300</p>
-          <p>4 x 45 min - $395</p>
-          <p>4 x 60 min - $445</p>
-
-          <p class="sub">At Home</p>
-          <p>4 x 45 min - $445</p>
-          <p>4 x 60 min - $535</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div>
-        <h3>BOOK YOUR FIRST SESSION TODAY</h3>
-        <p>
-          Start with a private session and choose the option that fits your
-          schedule, goals, and location.
+        <p class="description">
+          Entrenamiento personalizado 1-a-1 sin compromiso a largo plazo. Las
+          sesiones privadas est&aacute;n disponibles en un parque local o
+          directamente en su hogar.
         </p>
-      </div>
 
-      <div class="contact">
-        <div class="contact-label">Contact</div>
-        <div class="contact-name">Brandon Mederos</div>
-        <a href="tel:17865317439">{phone}</a>
-        <a href={`mailto:${email}`}>{email}</a>
-      </div>
-    </section>
-  </main>
-</div>
+        <div class="highlight">
+          <div class="highlight-price">$85-$165</div>
 
+          <div>
+            <div class="highlight-title">Opciones Flexibles de Sesiones</div>
+
+            <div class="highlight-small">Ahorre cuando reserve 4 sesiones</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cards">
+        <div class="card">
+          <h2>Lo Que Recibe</h2>
+
+          <div class="benefit">
+            <span class="dot"></span>
+            <span>Entrenamiento personalizado 1-a-1</span>
+          </div>
+
+          <div class="benefit">
+            <span class="dot"></span>
+            <span>Planes de lecciones estructurados</span>
+          </div>
+
+          <div class="benefit">
+            <span class="dot"></span>
+            <span
+              >Seguimiento de progreso despu&eacute;s de cada sesi&oacute;n</span
+            >
+          </div>
+
+          <div class="benefit">
+            <span class="dot"></span>
+            <span>Enfoque en confianza y disciplina</span>
+          </div>
+
+          <div class="benefit">
+            <span class="dot"></span>
+            <span>Entrenamiento para principiantes y avanzados</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Sin Compromiso a Largo Plazo</h2>
+
+          <div class="benefit">
+            <span class="dot"></span>
+            <span>Entrene a su propio ritmo</span>
+          </div>
+
+          <div class="benefit">
+            <span class="dot"></span>
+            <span>Reserve sesiones individuales</span>
+          </div>
+
+          <div class="benefit">
+            <span class="dot"></span>
+            <span>Ahorre con paquetes de 4 sesiones</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing">
+        <h2>Precios</h2>
+
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Sesiones Individuales</h3>
+
+            <p class="sub">En Parque Local</p>
+            <p>30 min - $85</p>
+            <p>45 min - $110</p>
+            <p>60 min - $135</p>
+
+            <p class="sub">En Casa</p>
+            <p>45 min - $125</p>
+            <p>60 min - $165</p>
+          </div>
+
+          <div class="price-card featured">
+            <h3>Precios Promedio</h3>
+
+            <p class="big-price">$85-$165</p>
+
+            <p class="muted">Opciones flexibles de sesiones disponibles</p>
+
+            <p class="muted">Ahorre con paquetes</p>
+          </div>
+
+          <div class="price-card">
+            <h3>Paquetes de 4 Sesiones</h3>
+
+            <p class="sub">En Parque Local</p>
+            <p>4 x 30 min - $300</p>
+            <p>4 x 45 min - $395</p>
+            <p>4 x 60 min - $445</p>
+
+            <p class="sub">En Casa</p>
+            <p>4 x 45 min - $445</p>
+            <p>4 x 60 min - $535</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div>
+          <h3>RESERVE SU PRIMERA SESI&Oacute;N HOY</h3>
+
+          <p>
+            Comience con una sesi&oacute;n privada y elija la opci&oacute;n que
+            mejor se adapte a su horario, metas y ubicaci&oacute;n.
+          </p>
+        </div>
+
+        <div class="contact">
+          <div class="contact-label">Contacto</div>
+
+          <div class="contact-name">Brandon Mederos</div>
+
+          <a href="tel:17865317439">{phone}</a>
+
+          <a href={`mailto:${email}`}>{email}</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</TeachLayout>
 <style>
   :global(html),
   :global(body) {
@@ -148,29 +174,34 @@ const email = "brandonm@gbbegroup.com";
     box-sizing: border-box;
   }
 
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 5vw, 3.5rem);
+  }
   .lang-btn {
-    position: absolute;
-    top: 22px;
-    right: 22px;
+    align-self: flex-end;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    padding: 10px 14px;
+    padding: 0.65rem 1rem;
 
-    border-radius: 999px;
+    border-radius: 999rem;
+
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.12);
 
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(8px);
-
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.82);
     text-decoration: none;
 
-    font-size: 13px;
+    font-size: clamp(0.7rem, 1.8vw, 0.85rem);
     font-weight: 700;
-    letter-spacing: 0.02em;
+
+    backdrop-filter: blur(8px);
 
     transition:
       background 0.2s ease,

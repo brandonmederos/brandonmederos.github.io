@@ -1,0 +1,150 @@
+---
+import TeachLayout from "../../layouts/TeachLayout.astro";
+---
+
+<TeachLayout
+  title="Private Martial Arts Training"
+  description="Private 1-on-1 martial arts coaching for kids, teens, and adults."
+>
+  <section class="teach-home">
+    <p class="eyebrow">Karate · Kickboxing · MMA · Ages 3 to Adult</p>
+
+    <h1>
+      Private Martial Arts<br />
+      Training
+    </h1>
+
+    <p class="intro">
+      Personalized 1-on-1 martial arts coaching available at your home or a
+      local park. Build confidence, discipline, fitness, and practical
+      self-defense skills.
+    </p>
+
+    <div class="actions">
+      <a class="primary" href="/teach/pricing/">View Pricing</a>
+      <a class="secondary" href="/teach/limited-offer/">Limited Offer</a>
+    </div>
+
+    <div class="cards">
+      <a href="/teach/pricing/">
+        <strong>Pricing</strong>
+        <span>View private session options and package pricing.</span>
+      </a>
+
+      <a href="/teach/limited-offer/">
+        <strong>Limited Offer</strong>
+        <span>Referral bonus and special promotion details.</span>
+      </a>
+
+      <a href="/">
+        <strong>Portfolio</strong>
+        <span>Return to Brandon Mederos’ main website.</span>
+      </a>
+    </div>
+  </section>
+</TeachLayout>
+
+<style>
+  .teach-home {
+    min-height: calc(100vh - 90px);
+    padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 5vw, 3rem);
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(239, 35, 42, 0.22),
+        transparent 34rem
+      ),
+      linear-gradient(180deg, #050505 0%, #111113 100%);
+  }
+
+  .eyebrow {
+    color: #ff4747;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    max-width: 900px;
+    margin: 0;
+    color: white;
+    font-size: clamp(3rem, 10vw, 7.5rem);
+    line-height: 0.88;
+    text-transform: uppercase;
+    letter-spacing: -0.06em;
+  }
+
+  .intro {
+    max-width: 720px;
+    margin: 2rem 0 0;
+    color: #e8e8e8;
+    font-size: clamp(1.05rem, 2vw, 1.4rem);
+    line-height: 1.55;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.25rem;
+    padding: 0.9rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  .primary {
+    background: #ef232a;
+    color: white;
+  }
+
+  .secondary {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 1100px;
+    margin-top: 3rem;
+  }
+
+  .cards a {
+    min-height: 10rem;
+    padding: 1.35rem;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.055);
+    color: white;
+    text-decoration: none;
+  }
+
+  .cards strong {
+    display: block;
+    margin-bottom: 0.7rem;
+    font-size: 1.15rem;
+  }
+
+  .cards span {
+    color: #d7d7d7;
+    line-height: 1.45;
+  }
+
+  @media (max-width: 800px) {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

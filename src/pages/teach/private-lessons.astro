@@ -1,86 +1,88 @@
 ---
 const phone = "(786) 531-7439";
 const email = "brandonm@gbbegroup.com";
+import TeachLayout from "../../layouts/TeachLayout.astro";
 ---
 
-<main class="page">
-  <section class="hero">
-    <p class="eyebrow">Karate - Kickboxing - MMA - Ages 3 to Adult</p>
-    <h1>Private Martial Arts Training</h1>
-    <p class="subtitle">
-      Personalized 1-on-1 training with no long-term commitment.
-    </p>
-  </section>
+<TeachLayout title="Private Martial Arts Training">
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Karate - Kickboxing - MMA - Ages 3 to Adult</p>
+      <h1>Private Martial Arts Training</h1>
+      <p class="subtitle">
+        Personalized 1-on-1 training with no long-term commitment.
+      </p>
+    </section>
 
-  <section class="content-layout">
-    <div class="card what-card">
-      <h2>What You Get</h2>
-      <ul>
-        <li>Personalized 1-on-1 training</li>
-        <li>Structured lesson plans</li>
-        <li>Progress tracking after every session</li>
-        <li>Confidence & discipline focused</li>
-        <li>Beginner to advanced training</li>
-      </ul>
-    </div>
-
-    <div class="card commitment-card">
-      <h2>No Long-Term Commitment</h2>
-      <ul>
-        <li>Train at your pace.</li>
-        <li>Save when you book 4 sessions.</li>
-      </ul>
-    </div>
-
-    <section class="card pricing">
-      <h2>Pricing</h2>
-
-      <div class="pricing-grid">
-        <div class="pricing-column">
-          <h3>&#129355 Single Sessions &#129355</h3>
-
-          <p class="sub">&#127794 At Local Park &#127794</p>
-          <p>30 min - $85</p>
-          <p>45 min - $110</p>
-          <p>60 min - $135</p>
-
-          <p class="sub">&#127968 At Home &#127968</p>
-          <p>45 min - $125</p>
-          <p>60 min - $165</p>
-        </div>
-
-        <div class="pricing-column center">
-          <div class="mobile-divider"></div>
-          <h3>Average Pricing</h3>
-          <p class="price-highlight">$85-$165</p>
-          <p class="muted">Flexible session options available</p>
-          <p class="muted">Save with packages</p>
-        </div>
-
-        <div class="mobile-divider"></div>
-        <div class="pricing-column">
-          <h3>&#128230 4-Session Packages &#128230</h3>
-
-          <p class="sub">&#127794At Local Park &#127794</p>
-          <p>4 x 30 min - $300</p>
-          <p>4 x 45 min - $395</p>
-          <p>4 x 60 min - $445</p>
-
-          <p class="sub">&#127968 At Home &#127968</p>
-          <p>4 x 45 min - $445</p>
-          <p>4 x 60 min - $535</p>
-        </div>
+    <section class="content-layout">
+      <div class="card what-card">
+        <h2>What You Get</h2>
+        <ul>
+          <li>Personalized 1-on-1 training</li>
+          <li>Structured lesson plans</li>
+          <li>Progress tracking after every session</li>
+          <li>Confidence & discipline focused</li>
+          <li>Beginner to advanced training</li>
+        </ul>
       </div>
-    </section>
 
-    <section class="cta">
-      <h2>Book Your First Session Today</h2>
-      <a href="tel:17865317439">{phone}</a>
-      <a href={`mailto:${email}`}>{email}</a>
-    </section>
-  </section>
-</main>
+      <div class="card commitment-card">
+        <h2>No Long-Term Commitment</h2>
+        <ul>
+          <li>Train at your pace.</li>
+          <li>Save when you book 4 sessions.</li>
+        </ul>
+      </div>
 
+      <section class="card pricing">
+        <h2>Pricing</h2>
+
+        <div class="pricing-grid">
+          <div class="pricing-column">
+            <h3>&#129355 Single Sessions &#129355</h3>
+
+            <p class="sub">&#127794 At Local Park &#127794</p>
+            <p>30 min - $85</p>
+            <p>45 min - $110</p>
+            <p>60 min - $135</p>
+
+            <p class="sub">&#127968 At Home &#127968</p>
+            <p>45 min - $125</p>
+            <p>60 min - $165</p>
+          </div>
+
+          <div class="pricing-column center">
+            <div class="mobile-divider"></div>
+            <h3>Average Pricing</h3>
+            <p class="price-highlight">$85-$165</p>
+            <p class="muted">Flexible session options available</p>
+            <p class="muted">Save with packages</p>
+          </div>
+
+          <div class="mobile-divider"></div>
+          <div class="pricing-column">
+            <h3>&#128230 4-Session Packages &#128230</h3>
+
+            <p class="sub">&#127794At Local Park &#127794</p>
+            <p>4 x 30 min - $300</p>
+            <p>4 x 45 min - $395</p>
+            <p>4 x 60 min - $445</p>
+
+            <p class="sub">&#127968 At Home &#127968</p>
+            <p>4 x 45 min - $445</p>
+            <p>4 x 60 min - $535</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <h2>Book Your First Session Today</h2>
+        <a href="tel:17865317439">{phone}</a>
+        <a href={`mailto:${email}`}>{email}</a>
+      </section>
+    </section>
+  </main>
+</TeachLayout>
 <style>
   :global(html),
   :global(body) {
